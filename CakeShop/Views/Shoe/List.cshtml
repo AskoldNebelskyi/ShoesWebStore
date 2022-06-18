@@ -1,0 +1,17 @@
+﻿@model ShoesListViewModel
+
+@if (Model.Shoes?.Count() > 0)
+{
+    <h1>@Model.CurrentCategory</h1>
+    <div class="row">
+        @foreach (var shoe in Model.Shoes)
+        {
+            @await Html.PartialAsync("ShoeView", shoe);
+        }
+    </div>
+}
+else
+{
+    <h1>Shoes</h1>
+    <p>Sorry! Not shoes are found in '@Model.CurrentCategory' category. </p>
+}
