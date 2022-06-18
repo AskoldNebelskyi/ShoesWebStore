@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "shoe-shop",
   "private": true,
-  "author": "Ritwick Dey",
+  "author": "AVespa",
   "scripts": {
     "start": "webpack --config webpack.config.js --watch --progress --profile",
     "build": "webpack --config webpack.config.js --progress --profile",
