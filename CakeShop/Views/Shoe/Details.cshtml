@@ -15,15 +15,15 @@
         <p>@Model.ShortDescription</p>
 @*        //////////////Adding size//////////////
 *@
-@*        <p>@Model.Size</p>
-*@        
+        <p>@Model.Size</p>
+        
         <p>@Model.LongDescription</p>
         <form asp-action="AddToShoppingCart"
               asp-controller="ShoppingCart"
               asp-route-shoeId="@Model.Id"
               method="post">
 
-            <button class="btn btn-primary buy-now-btn">Add to Cart</button>
+            <button class="btn btn-primary buy-now-btn">Додати до кошика</button>
         </form>
 
     </div>

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shoe Shop</title>
+    <title>ShoesWebStore</title>
     <environment names="Development">
         <script src="~/dist/main.js"></script>
     </environment>
@@ -21,7 +21,7 @@
         <div class="container">
             <a class="navbar-brand" href="/">
                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                Shoe Shop
+                Yulia's Shoes WebStore
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,14 +33,14 @@
                         @Html.Partial("Category")
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="contact" asp-action="">Contact Us</a>
+                        <a class="nav-link" asp-controller="contact" asp-action="">Зворотній зв'язок</a>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav">
                     <li>
                         <a class="nav-link" href="/shoppingcart">
-                            Cart
+                            Кошик
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             @await Component.InvokeAsync("ShoppingCartSummary")
                         </a>
@@ -60,12 +60,15 @@
 
     <footer class="footer">
         <div class="container">
-            <p class="d-inline float-left">Copyright (c) 2018-@(DateTime.Now.Year + 1)</p>
+            <p class="d-inline float-left">Copyright (c) 2022-@(DateTime.Now.Year + 1)</p>
             <p class="d-inline float-right">
-                Ritwick Dey
+                Yulia Production
             </p>
         </div>
-        @*<email address="example@example.com" content="Contact Us"></email>*@
+        <div class="container">
+            <p class="d-inline float-left"><email address="yuliaprod@contact.yulia" content="Написати нам"></email></p>
+        </div>
+        @*<email address="yuliaprod@contact.yulia" content="Contact Us"></email>*@
     </footer>
 
     @RenderSection("scripts", false)
