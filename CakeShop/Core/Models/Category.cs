@@ -12,6 +12,10 @@ namespace ShoeShop.Core.Models
         [StringLength(255)]
         public string Name { get; set; }
 
+        [StringLength(255)]
+        public string Description { get; set; }
+
+
         public ICollection<Shoe> Shoes { get; set; }
 
         public Category()

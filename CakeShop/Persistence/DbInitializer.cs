@@ -18,31 +18,38 @@ namespace ShoeShop.Persistence
 
             var categories = new List<Category>
             {
-                new Category { Name = "Vanilla Shoes"},
-                new Category { Name = "Chocolate Shoes" },
-                new Category { Name = "Fruit Shoes"}
+                new Category { Name = "Повсякденне", Description = "Повсякденне взуття на кожен день."},
+                new Category { Name = "Спортивне", Description = "Для занять спортом, активного відпочинку."},
+                new Category { Name = "Класичне", Description = "На випускний чи на вручення дипломів!:)"},
+                new Category { Name = "Для хайкінгу", Description = "Для хайкінгу/аутдору, в подорожі."},
+                new Category { Name = "Дитяче", Description = "Для наших найдорожчих діток."},
+                new Category { Name = "Сандалі/Пантолети", Description = "На літо саме то!"},
+                new Category { Name = "Футбольне", Description = "Хто гратиме у футбол у найкращому взутті? Ви!"},
+                new Category { Name = "Розкішне", Description = "Лакшері чи лухурі? Обирати вам!"},
+                new Category { Name = "Ортопедичне", Description = "Подбає про ваші стопи!"},
+
             };
 
             var shoes = new List<Shoe>
             {
                 new Shoe
                 {
-                    Name ="Strawberry Shoe",
-                    Price = 48.00M,
-                    ShortDescription ="Yammy Sweet & Testy",
+                    Name ="Burberry",
+                    Price = 28900.00M,
+                    ShortDescription ="So cool",
                     //////////////Adding size//////////////
-                    Size = 42,
-                    LongDescription ="Icing carrot shoe jelly-o cheeseshoe. tootsie roll oat shoe pie chocolate bar cookie dragée brownie. Lollipop cotton candy shoe bear claw oat shoe.dragée gummies.",
+                    //Size = 42,
+                    LongDescription ="It's Burberry, baby",
                     Category = categories[0],
-                    ImageUrl ="/img/vanilla-shoe2.jpg",
+                    ImageUrl ="/img/Shoes/Luxury/burberry.webp",
                     IsShoeOfTheWeek = true,
-                },
-                new Shoe
+                }//,
+                /*new Shoe
                 {
                     Name ="Dark Chocolate Shoe",
                     Price =45.50M,
                     ShortDescription ="Yammy! Dark Chocolate Flavour",
-                    Size = 41,
+                    //Size = 41,
                     LongDescription ="Icing carrot shoe jelly-o cheeseshoe. tootsie roll oat shoe pie chocolate bar cookie dragée brownie. Lollipop cotton candy shoe bear claw oat shoe.dragée gummies.",
                     Category = categories[1],
                     ImageUrl ="/img/chocolate-shoe4.jpg",
@@ -53,7 +60,7 @@ namespace ShoeShop.Persistence
                     Name ="Special Chocolate Shoe",
                     Price = 40.50M,
                     ShortDescription ="Taste Our Special Chocolates",
-                    Size = 43,
+                    //Size = 43,
                     LongDescription ="Icing carrot shoe jelly-o cheeseshoe. tootsie roll oat shoe pie chocolate bar cookie dragée brownie. Lollipop cotton candy shoe bear claw oat shoe.dragée gummies.",
                     Category = categories[1],
                     ImageUrl ="/img/chocolate-shoe3.jpg",
@@ -64,7 +71,7 @@ namespace ShoeShop.Persistence
                     Name ="Red Velvet Shoe",
                     Price=35.00M,
                     ShortDescription ="Our Special Shoe",
-                    Size = 39,
+                    //Size = 39,
                     LongDescription ="Icing carrot shoe jelly-o cheeseshoe. tootsie roll oat shoe pie chocolate bar cookie dragée brownie. Lollipop cotton candy shoe bear claw oat shoe.dragée gummies.",
                     Category = categories[0],
                     ImageUrl ="/img/vanilla-shoe4.jpg",
@@ -75,12 +82,12 @@ namespace ShoeShop.Persistence
                     Name ="Mixed Fruit Shoe",
                     Price = 30.50M,
                     ShortDescription ="Fruity & Testy",
-                    Size = 40,
+                    //Size = 40,
                     LongDescription ="Icing carrot shoe jelly-o cheeseshoe. tootsie roll oat shoe pie chocolate bar cookie dragée brownie. Lollipop cotton candy shoe bear claw oat shoe.caramels.",
                     Category = categories[2],
                     ImageUrl ="/img/fruit-shoe.jpg",
                     IsShoeOfTheWeek =true,
-                }
+                }*/
 
             };
 

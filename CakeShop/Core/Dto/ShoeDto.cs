@@ -16,9 +16,9 @@ namespace ShoeShop.Core.Dto
         public string ShortDescription { get; set; }
 
         //////////////Adding size//////////////
-        [Required]
+        /*[Required]
         [StringLength(255)]
-        public int Size { get; set; }
+        public int Size { get; set; }*/
 
         [Required]
         [Display(Name = "Long Description")]

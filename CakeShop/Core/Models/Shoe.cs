@@ -15,9 +15,9 @@ namespace ShoeShop.Core.Models
         public string ShortDescription { get; set; }
 
         //////////////Adding size//////////////
-        [Required]
-        [StringLength(255)]
-        public int Size { get; set; }
+        //[Required]
+        //[StringLength(255)]
+        //public int Size { get; set; }
 
         [Required]
         [StringLength(255)]
