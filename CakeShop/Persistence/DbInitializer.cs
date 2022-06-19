@@ -29,7 +29,6 @@ namespace ShoeShop.Persistence
                 new Category { Name = "Ортопедичне", Description = "Подбає про ваші стопи!"},
 
             };
-
             var shoes = new List<Shoe>
             {
                 new Shoe
@@ -98,7 +97,6 @@ namespace ShoeShop.Persistence
                 context.SaveChanges();
             }
 
-
             IdentityUser usr = null;
             string userEmail = configuration["Admin:Email"] ?? "admin@admin.com";
             string userName = configuration["Admin:Username"] ?? "admin";
@@ -129,7 +127,6 @@ namespace ShoeShop.Persistence
             }
 
             context.SaveChanges();
-
             System.Console.WriteLine("Seeding... - End");
         }
 

@@ -13,7 +13,6 @@ namespace ShoeShop.Persistence
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-
         public ShoeShopDbContext(DbContextOptions<ShoeShopDbContext> options)
             : base(options)
         {

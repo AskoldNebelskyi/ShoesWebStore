@@ -101,7 +101,7 @@ namespace ShoeShop.Persistence
                     {
                         Name = o.ShoeName,
                         //////////////Adding size//////////////
-                        Size = o.Size,
+                        //Size = o.Size,
                         Price = o.Price,
                         Qty = o.Qty
                     })

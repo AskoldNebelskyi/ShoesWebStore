@@ -32,9 +32,7 @@ namespace ShoeShop.Controllers
         [HttpGet("details/{id}")]
         public async Task<IActionResult> Details(int id)
         {
-
             var shoe = await _shoeRepository.GetShoeById(id);
-
             return View(shoe);
         }
     }

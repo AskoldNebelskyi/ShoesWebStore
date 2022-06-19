@@ -117,7 +117,5 @@ namespace ShoeShop.Controllers
             await _unitOfWork.CompleteAsync();
             return Ok();
         }
-
-
     }
 }
