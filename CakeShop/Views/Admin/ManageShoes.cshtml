@@ -2,16 +2,16 @@
 @{
     ViewData["Title"] = "ManageShoes";
 }
-<h2>Manage Shoes</h2>
+<h2>Керувати товарами</h2>
 <br />
 <div>
-    <a asp-action="AddShoe" class="btn buy-now-btn">Add New Shoe</a>
+    <a asp-action="AddShoe" class="btn buy-now-btn">Додати взуття</a>
 </div>
 <br />
 <table class="table ">
     <thead>
         <tr>
-            <th>Shoe Name</th>
+            <th>Назва взуття</th>
             <th></th>
         </tr>
     </thead>
@@ -21,9 +21,9 @@
             <tr id="shoe-@shoe.Id">
                 <td>@shoe.Name</td>
                 <td>
-                    <a class="btn btn-link btn-no-effect" asp-action="EditShoe" asp-route-id="@shoe.Id">Edit </a>
+                    <a class="btn btn-link btn-no-effect" asp-action="EditShoe" asp-route-id="@shoe.Id">Редагувати </a>
                     |
-                    <button class="btn btn-link btn-no-effect deleteBtn" data-id="@shoe.Id">Delete</button>
+                    <button class="btn btn-link btn-no-effect deleteBtn" data-id="@shoe.Id">Видалити</button>
                 </td>
             </tr>
         }
@@ -35,7 +35,7 @@
 
         $(".deleteBtn").click((e) => {
             const id = $(e.target).data("id");
-            if (!confirm("Are you sure to delete?"))
+            if (!confirm("Ви певні що хочете видалити даний товар?"))
                 return;
 
             $.ajax({
@@ -46,7 +46,7 @@
                     $(target).fadeOut(500, () => $(target).remove());
                 },
                 error: (e) => {
-                    alert("Somthing Went Wrong", e);
+                    alert("Щось пішло не так", e);
                 }
             });
         });
