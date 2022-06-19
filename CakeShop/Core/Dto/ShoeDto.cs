@@ -7,11 +7,11 @@ namespace ShoeShop.Core.Dto
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Shoe Name")]
+        [Display(Name = "Назва шузів")]
         public string Name { get; set; }
 
         [Required]
-        [Display(Name = "Short Description")]
+        [Display(Name = "Короткий опис")]
         [MaxLength(50)]
         public string ShortDescription { get; set; }
 
@@ -21,22 +21,22 @@ namespace ShoeShop.Core.Dto
         public int Size { get; set; }*/
 
         [Required]
-        [Display(Name = "Long Description")]
+        [Display(Name = "Опис")]
         [MaxLength(255)]
         public string LongDescription { get; set; }
 
         [Required]
-        [Display(Name = "Price")]
+        [Display(Name = "Прайс")]
         public decimal Price { get; set; }
 
         [Required]
-        [Display(Name = "Image Url")]
+        [Display(Name = "Url зображення")]
         public string ImageUrl { get; set; }
 
-        [Display(Name = "Is Shoe Of the Week? ")]
+        [Display(Name = "Вибір тижня? ")]
         public bool IsShoeOfTheWeek { get; set; }
 
-        [Display(Name = "Category")]
+        [Display(Name = "Категорія")]
         public int CategoryId { get; set; }
     }
 }

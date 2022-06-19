@@ -7,50 +7,53 @@ namespace ShoeShop.Core.Dto
 
 
         [StringLength(255)]
-        [Display(Name = "First Name")]
-        [Required(ErrorMessage = "First Name is required")]
+        [Display(Name = "Ім'я")]
+        [Required(ErrorMessage = "Без ім'я нікуда :)")]
         public string FirstName { get; set; }
 
         [StringLength(255)]
-        [Display(Name = "Last Name")]
-        [Required(ErrorMessage = "Last Name is required")]
+        [Display(Name = "Прізвище")]
+        [Required(ErrorMessage = "і без прізвища нікуда :)")]
         public string LastName { get; set; }
 
         [StringLength(255)]
-        [Display(Name = "Address Line 1")]
-        [Required(ErrorMessage = "Address Line 1 is required")]
+        [Display(Name = "Адреса 1")]
+        [Required(ErrorMessage = "Необхідна хоч одна адреса")]
         public string AddressLine1 { get; set; }
 
         [StringLength(255)]
-        [Display(Name = "Address Line 2")]
+        [Display(Name = "Адреса 2")]
         public string AddressLine2 { get; set; }
 
         [StringLength(255)]
-        [Required(ErrorMessage = "City is required")]
+        [Display(Name = "Місто")]
+        [Required(ErrorMessage = "А як ми вас знайдемо?")]
         public string City { get; set; }
 
         [StringLength(255)]
-        [Required(ErrorMessage = "State is required")]
+        [Display(Name = "Область")]
+        [Required(ErrorMessage = "Область ще, будь ласка")]
         public string State { get; set; }
 
         [StringLength(255)]
-        [Required(ErrorMessage = "Country is required")]
+        [Display(Name = "Країна")]
+        [Required(ErrorMessage = "Ну куди ж без країни ?")]
         public string Country { get; set; }
 
         [StringLength(6)]
-        [Required(ErrorMessage = "Zipcode is required")]
-        [Display(Name = "Zip Code")]
+        [Required(ErrorMessage = "Ви не хочете отримати свої нові шузи ?")]
+        [Display(Name = "Поштовий індекс")]
         public string ZipCode { get; set; }
 
         [StringLength(10)]
-        [Required(ErrorMessage = "Phone Number is required")]
-        [Display(Name = "Phone Number")]
+        [Required(ErrorMessage = "Не кажіть, що не маєте :)")]
+        [Display(Name = "Мобільний номер")]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
         [StringLength(255)]
-        [Required(ErrorMessage = "Email Address is required")]
-        [Display(Name = "Email Address")]
+        [Required(ErrorMessage = "А куди квинтацію прислати ?")]
+        [Display(Name = "Email адреса")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }

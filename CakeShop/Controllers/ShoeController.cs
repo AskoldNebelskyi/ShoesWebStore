@@ -24,7 +24,7 @@ namespace ShoeShop.Controllers
             var shoesListViewModel = new ShoesListViewModel
             {
                 Shoes = await _shoeRepository.GetShoes(selectedCategory),
-                CurrentCategory = selectedCategory ?? "All Shoes"
+                CurrentCategory = selectedCategory ?? "Усе усе наше взуття :)"
             };
             return View(shoesListViewModel);
         }
