@@ -49,6 +49,7 @@ main.container {
 
 .carousel-caption {
     background-color:var(--color2);
+    opacity: 0.6;
     width: 100%;
     position: absolute;
     left: 0;
