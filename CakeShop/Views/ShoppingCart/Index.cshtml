@@ -17,6 +17,7 @@
     <thead>
         <tr>
             <th>Товар</th>
+            <th>Розмір</th>
             <th>Кількість</th>
             <th>Ціна</th>
             <th>Підсумок</th>
@@ -27,6 +28,21 @@
         {
             <tr>
                 <td>@item.Shoe.Name</td>
+                <td>
+                    <form class="d-inline align-middle" asp-action="DecreaseSize"
+                    asp-controller="ShoppingCart"
+                    asp-route-shoeId="@item.ShoeId"
+                    method="post">
+                    <button class="btn fa fa-minus fa-small" aria-hidden="true"></button>
+                </form>
+                    <span style="padding:1px 10px">@item.Size</span>
+                <form class="d-inline align-middle" asp-action="IncreaseSize"
+                    asp-controller="ShoppingCart"
+                    asp-route-shoeId="@item.ShoeId"
+                    method="post">
+                    <button class="btn fa fa-plus fa-small" aria-hidden="true"></button>
+                </form>
+                </td>
                 <td>
                     <form class="d-inline align-middle" asp-action="RemoveFromShoppingCart"
                           asp-controller="ShoppingCart"
