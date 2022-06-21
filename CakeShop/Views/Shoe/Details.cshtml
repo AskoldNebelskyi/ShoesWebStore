@@ -12,11 +12,7 @@
     <div class="col-md-6">
         <h4>@Model.Name</h4>
         <p><i>@Model.Price.ToString("c")</i></p>
-        <p>@Model.ShortDescription</p>
-@*        //////////////Adding size//////////////
-*@
-        @*<p>@Model.Size</p>*@
-        
+        <p>@Model.ShortDescription</p>     
         <p>@Model.LongDescription</p>
         <form asp-action="AddToShoppingCart"
               asp-controller="ShoppingCart"

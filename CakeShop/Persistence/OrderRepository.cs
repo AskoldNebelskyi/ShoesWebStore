@@ -61,7 +61,13 @@ namespace ShoeShop.Persistence
                         PhoneNumber = e.PhoneNumber,
                         State = e.State,
                         ZipCode = e.ZipCode
-                    }
+                    },
+                    ShoeOrderInfos = e.OrderDetails.Select(o => new MyShoeOrderInfo
+                    { 
+                        Name = o.ShoeName,
+                        Price = o.Price,
+                        Qty = o.Qty
+                    })
                 })
                 .ToListAsync();
 
