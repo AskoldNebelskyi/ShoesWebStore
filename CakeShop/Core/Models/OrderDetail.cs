@@ -9,8 +9,7 @@ namespace ShoeShop.Core.Models
         [Required]
         [MaxLength(255)]
         public string ShoeName { get; set; }
-        //////////////Adding size//////////////
-        //public int Size { get; set; }
+
         public int Qty { get; set; }
         public decimal Price { get; set; }
 

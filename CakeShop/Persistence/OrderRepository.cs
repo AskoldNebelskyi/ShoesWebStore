@@ -34,7 +34,6 @@ namespace ShoeShop.Persistence
             {
                 Qty = e.Qty,
                 ShoeName = e.Shoe.Name,
-                //Size = e.Shoe.Size,
                 OrderId = order.Id,
                 Price = e.Shoe.Price
             }));
@@ -62,15 +61,7 @@ namespace ShoeShop.Persistence
                         PhoneNumber = e.PhoneNumber,
                         State = e.State,
                         ZipCode = e.ZipCode
-                    }//,
-                    /*ShoeOrderInfos = e.OrderDetails.Select(o => new MyShoeOrderInfo
-                    {
-                        Name = o.ShoeName,
-                        //////////////Adding size//////////////
-                        Size = o.Size,
-                        Price = o.Price,
-                        Qty = o.Qty
-                    })*/
+                    }
                 })
                 .ToListAsync();
 

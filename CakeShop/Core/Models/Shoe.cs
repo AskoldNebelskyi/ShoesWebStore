@@ -14,11 +14,6 @@ namespace ShoeShop.Core.Models
         [StringLength(50)]
         public string ShortDescription { get; set; }
 
-        //////////////Adding size//////////////
-        //[Required]
-        //[StringLength(255)]
-        //public int Size { get; set; }
-
         [Required]
         [StringLength(255)]
         public string LongDescription { get; set; }

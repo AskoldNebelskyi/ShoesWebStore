@@ -15,11 +15,6 @@ namespace ShoeShop.Core.Dto
         [MaxLength(50)]
         public string ShortDescription { get; set; }
 
-        //////////////Adding size//////////////
-        /*[Required]
-        [StringLength(255)]
-        public int Size { get; set; }*/
-
         [Required]
         [Display(Name = "Опис")]
         [MaxLength(255)]

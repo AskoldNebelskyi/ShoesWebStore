@@ -2,9 +2,9 @@
 
 A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
 
-![screenshot1](./screenshots/screenshot1.png)
+![screenshot1](./screenshots/scrnsht1.png)
 
-## APP/Code Features 
+## APP/Code Features
 - Only Admin can perform Create/Edit/Delete cakes & manage Orders.
 - Normal User can only can buy cakes & view their orders.
 - Managing Cart System using cookie.
@@ -12,10 +12,10 @@ A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
 - Cookie Based Authentication & Authorization - Not Session
 - Login through either `Username` or `Email`.
 - Responsive UI
-- Repository Pattern 
+- Repository Pattern
 - Application Architecture is decoupled form ORM (Entity Framework)
 
-## Framework / Library 
+## Framework / Library
 - ASP.NET Core 2.0 *(Backend)*
 - Razor View Engine *(For generating markup)*
 - Entity Framework Core *(ORM)*
@@ -29,7 +29,7 @@ A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
    > Make sure, dotnet core SDK & npm is installed in your machine.
 
 - **Using VS2017**
-     ``` 
+     ```
        > git clone https://github.com/ritwickdey/Cake-Shop.git
        > cd Cake-Shop/
     ```
@@ -50,14 +50,14 @@ A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
         > npm i webpack -g
         > webpack --config webpack.config.js
         > npm run build
-        > dotnet build 
+        > dotnet build
         > dotnet ef database update
-        > dotnet run 
+        > dotnet run
     ```
 
 ## Sceenshots
-![screenshot2](./screenshots/screenshot2.png)
-![screenshot3](./screenshots/screenshot3.png)
-![screenshot4](./screenshots/screenshot4.png)
-![screenshot5](./screenshots/screenshot5.png)
-![screenshot6](./screenshots/screenshot6.png)
+![screenshot2](./screenshots/scrnsht2.png)
+![screenshot3](./screenshots/scrnsht3.png)
+![screenshot4](./screenshots/scrnsht4.png)
+![screenshot5](./screenshots/scrnsht5.png)
+![screenshot6](./screenshots/scrnsht6.png)
