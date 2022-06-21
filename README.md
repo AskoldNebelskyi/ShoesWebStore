@@ -1,12 +1,12 @@
-# Cake Shop
+# Shoe Shop
 
-A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
+A sample ShoesWebStore built with ASP.NET Core (Multi-Page Application)
 
 ![screenshot1](./screenshots/scrnsht1.png)
 
 ## APP/Code Features
-- Only Admin can perform Create/Edit/Delete cakes & manage Orders.
-- Normal User can only can buy cakes & view their orders.
+- Only Admin can perform Create/Edit/Delete shoes & manage Orders.
+- Normal User can only can buy shoes & view their orders.
 - Managing Cart System using cookie.
 - Client Side & Server side validation,
 - Cookie Based Authentication & Authorization - Not Session
@@ -28,12 +28,12 @@ A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
 
    > Make sure, dotnet core SDK & npm is installed in your machine.
 
-- **Using VS2017**
+- **Using VS2022**
      ```
-       > git clone https://github.com/ritwickdey/Cake-Shop.git
+       > git clone https://github.com/AskoldNebelskyi/ShoesWebStore
        > cd Cake-Shop/
     ```
-    - Now Open the `CakeShop.sln` through `VS2017`.
+    - Now Open the `ShoesWebStore.sln` through `VS2022`.
     - Open `appsettings.json` & change the connection string. (But wait! you may not need to change it as this the default connection string of `SQL Server Express` that comes with `Visual Studio`).
     - Hit `Ctrl+Shift+B` to build.
     - Open `Package Manager Console` from `Tools` and enter `update-database`.
@@ -41,8 +41,8 @@ A sample Cake Shop Website built with ASP.NET Core (Multi-Page Application)
 
 - **Using CLI**
     ```
-        > git clone https://github.com/ritwickdey/Cake-Shop.git
-        > cd Cake-Shop/Cake-Shop/
+        > git clone https://github.com/AskoldNebelskyi/ShoesWebStore
+        > cd ShoesWebStore/ShoesWebStore
         > npm install
         > dotnet restore
         > set ASPNETCORE_ENVIRONMENT=Development
