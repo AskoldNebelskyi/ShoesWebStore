@@ -117,13 +117,13 @@ main.container {
 }
 
 .buy-now-btn {
-    background-color: var(--color1);
+    background-color: #F53935;
     border: 1px solid var(--color1);
     color: #fff;
 }
     .buy-now-btn:hover,
     .buy-now-btn:active {
-        background-color: var(--color2);
+        background-color: #28a745;
         border: 1px solid var(--color2);
         color: #fff;
     }
