@@ -136,6 +136,7 @@ namespace ShoeShop.Persistence
         }
 
         public async Task<int> AdjustSize(Shoe shoe, int size)
+//під другим атрибутом(size) деколи підкреслювало і пропонувало пульнути AdjustSize в IShoppingCartService.cs
         {
             var shoppingCartItem = await _context.ShoppingCartItems
                 .SingleOrDefaultAsync(s => s.ShoeId == shoe.Id && s.ShoppingCartId == Id);
@@ -153,7 +154,7 @@ namespace ShoeShop.Persistence
 
                 await _context.ShoppingCartItems.AddAsync(shoppingCartItem);
             }
-
+            shoppingCartItem.Size += size;////////////////ця хуйня все порішала і сайз селектор запахав
             await _context.SaveChangesAsync();
 
             ShoppingCartItems = null; // Reset
