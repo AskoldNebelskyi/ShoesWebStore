@@ -114,7 +114,7 @@ namespace ShoeShop.Persistence
                     Shoe = shoe,
                     Qty = 0,
                     ////SIZE/////
-                    Size = 0
+                    Size = 36
                 };
 
                 await _context.ShoppingCartItems.AddAsync(shoppingCartItem);
@@ -149,7 +149,7 @@ namespace ShoeShop.Persistence
                     Shoe = shoe,
                     Qty = 0,
                     ////SIZE/////
-                    Size = 0
+                    Size = 36
                 };
 
                 await _context.ShoppingCartItems.AddAsync(shoppingCartItem);
