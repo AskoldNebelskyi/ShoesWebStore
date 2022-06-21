@@ -9,11 +9,13 @@ namespace ShoeShop.Core.Models
         [Required]
         [MaxLength(255)]
         public string ShoeName { get; set; }
-
         public int Qty { get; set; }
-        public decimal Price { get; set; }
 
+        /// Adding SIZE
+        public int Size { get; set; }
+        public decimal Price { get; set; }
         public int OrderId { get; set; }
+
         public Order Order { get; set; }
     }
 }

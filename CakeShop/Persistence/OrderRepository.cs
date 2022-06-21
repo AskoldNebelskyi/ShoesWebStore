@@ -34,6 +34,8 @@ namespace ShoeShop.Persistence
             {
                 Qty = e.Qty,
                 ShoeName = e.Shoe.Name,
+                //////////////Adding size//////////////
+                Size = e.Size,
                 OrderId = order.Id,
                 Price = e.Shoe.Price
             }));
@@ -65,6 +67,8 @@ namespace ShoeShop.Persistence
                     ShoeOrderInfos = e.OrderDetails.Select(o => new MyShoeOrderInfo
                     { 
                         Name = o.ShoeName,
+                        //////////////Adding size//////////////
+                        Size = o.Size,
                         Price = o.Price,
                         Qty = o.Qty
                     })
@@ -98,7 +102,7 @@ namespace ShoeShop.Persistence
                     {
                         Name = o.ShoeName,
                         //////////////Adding size//////////////
-                        //Size = o.Size,
+                        Size = o.Size,
                         Price = o.Price,
                         Qty = o.Qty
                     })

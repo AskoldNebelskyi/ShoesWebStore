@@ -9,9 +9,15 @@ namespace ShoeShop.Core.Models
         IEnumerable<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         Task<int> AddToCartAsync(Shoe shoe, int qty = 1);
+        Task<int> RemoveFromCartAsync(Shoe shoe);
+
+        ////////////ADJUST THE SIZE//////////////////
+        Task<int> BiggerSizeAsync(Shoe shoe, int size = 1);
+        Task<int> SmallerSizeAsync(Shoe shoe);
+
         Task ClearCartAsync();
         Task<IEnumerable<ShoppingCartItem>> GetShoppingCartItemsAsync();
-        Task<int> RemoveFromCartAsync(Shoe shoe);
+        
         Task<(int ItemCount, decimal TotalAmmount)> GetCartCountAndTotalAmmountAsync();
     }
 }

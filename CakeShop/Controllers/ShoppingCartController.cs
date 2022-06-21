@@ -59,6 +59,35 @@ namespace ShoeShop.Controllers
             return RedirectToAction("Index");
         }
 
+        ///////SIZE////////
+        [HttpPost]
+        public async Task<IActionResult> IncreaseSize(int shoeId)
+        {
+            var selectedShoe = await _shoeRepository.GetShoeById(shoeId);
+            if (selectedShoe == null)
+            {
+                return NotFound();
+            }
+
+            await _shoppingCart.BiggerSizeAsync(selectedShoe);
+
+            return RedirectToAction("Index");
+        }
+        ///////SIZE////////
+        [HttpPost]
+        public async Task<IActionResult> DecreaseSize(int shoeId)
+        {
+            var selectedShoe = await _shoeRepository.GetShoeById(shoeId);
+            if (selectedShoe == null)
+            {
+                return NotFound();
+            }
+
+            await _shoppingCart.SmallerSizeAsync(selectedShoe);
+
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public async Task<IActionResult> RemoveAllCart()
         {

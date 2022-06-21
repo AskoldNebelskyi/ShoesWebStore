@@ -8,6 +8,9 @@ namespace ShoeShop.Core.Models
 
         public int Qty { get; set; }
 
+        /// Adding SIZE
+        public int Size { get; set; }
+
         public int ShoeId { get; set; }
 
         public Shoe Shoe { get; set; }

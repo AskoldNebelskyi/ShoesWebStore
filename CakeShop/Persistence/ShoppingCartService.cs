@@ -42,17 +42,19 @@ namespace ShoeShop.Persistence
             };
         }
 
+        ////////////TO ADD AN ITEM TO THE CART//////////////////
         public async Task<int> AddToCartAsync(Shoe shoe, int qty = 1)
         {
             return await AddOrRemoveCart(shoe, qty);
-
         }
 
+        ////////////TO REMOVE AN ITEM TO THE CART//////////////////
         public async Task<int> RemoveFromCartAsync(Shoe shoe)
         {
             return await AddOrRemoveCart(shoe, -1);
         }
 
+        ////////////TO GET ITEMS IN THE CART//////////////////
         public async Task<IEnumerable<ShoppingCartItem>> GetShoppingCartItemsAsync()
         {
             ShoppingCartItems = ShoppingCartItems ?? await _context.ShoppingCartItems
@@ -63,6 +65,18 @@ namespace ShoeShop.Persistence
             return ShoppingCartItems;
         }
 
+        //////BIGGER SIZE///////
+        public async Task<int> BiggerSizeAsync(Shoe shoe, int size = 1)
+        {
+            return await AdjustSize(shoe, size);
+        }
+        //////SMALLER SIZE///////
+        public async Task<int> SmallerSizeAsync(Shoe shoe)
+        {
+            return await AdjustSize(shoe, -1);
+        }
+
+        ////////////TO CLEAR THE CART//////////////////
         public async Task ClearCartAsync()
         {
             var shoppingCartItems = _context
@@ -89,10 +103,8 @@ namespace ShoeShop.Persistence
 
         private async Task<int> AddOrRemoveCart(Shoe shoe, int qty)
         {
-
-
             var shoppingCartItem = await _context.ShoppingCartItems
-                            .SingleOrDefaultAsync(s => s.ShoeId == shoe.Id && s.ShoppingCartId == Id);
+                .SingleOrDefaultAsync(s => s.ShoeId == shoe.Id && s.ShoppingCartId == Id);
 
             if (shoppingCartItem == null)
             {
@@ -100,7 +112,9 @@ namespace ShoeShop.Persistence
                 {
                     ShoppingCartId = Id,
                     Shoe = shoe,
-                    Qty = 0
+                    Qty = 0,
+                    ////SIZE/////
+                    Size = 0
                 };
 
                 await _context.ShoppingCartItems.AddAsync(shoppingCartItem);
@@ -121,5 +135,31 @@ namespace ShoeShop.Persistence
             return await Task.FromResult(shoppingCartItem.Qty);
         }
 
+        public async Task<int> AdjustSize(Shoe shoe, int size)
+        {
+            var shoppingCartItem = await _context.ShoppingCartItems
+                .SingleOrDefaultAsync(s => s.ShoeId == shoe.Id && s.ShoppingCartId == Id);
+
+            if (shoppingCartItem == null)
+            {
+                shoppingCartItem = new ShoppingCartItem
+                {
+                    ShoppingCartId = Id,
+                    Shoe = shoe,
+                    Qty = 0,
+                    ////SIZE/////
+                    Size = 0
+                };
+
+                await _context.ShoppingCartItems.AddAsync(shoppingCartItem);
+            }
+
+            await _context.SaveChangesAsync();
+
+            ShoppingCartItems = null; // Reset
+
+            return await Task.FromResult(shoppingCartItem.Size);
+            //throw new NotImplementedException();
+        }
     }
 }

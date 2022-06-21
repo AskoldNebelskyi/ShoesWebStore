@@ -11,9 +11,10 @@ using System;
 namespace ShoeShop.Migrations
 {
     [DbContext(typeof(ShoeShopDbContext))]
-    partial class ShoeShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220621194325_SizeAdded")]
+    partial class SizeAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

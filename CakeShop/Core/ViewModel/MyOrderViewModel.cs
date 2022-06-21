@@ -17,8 +17,10 @@ namespace ShoeShop.Core.ViewModel
     {
         public int Qty { get; set; }
         public decimal Price { get; set; }
-        //////////////Adding size//////////////
-        //public int Size { get; set; }
+
+        /// Adding SIZE
+        public int Size { get; set; }
+
         public string Name { get; set; }
     }
 }
