@@ -3,6 +3,9 @@
 @if (Model.Shoes?.Count() > 0)
 {
     <h1>@Model.CurrentCategory</h1>
+   @* <p>
+       Here could be the category's description
+    </p>*@
     <div class="row">
         @foreach (var shoe in Model.Shoes)
         {

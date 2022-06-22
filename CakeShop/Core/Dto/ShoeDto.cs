@@ -8,6 +8,7 @@ namespace ShoeShop.Core.Dto
 
         [Required]
         [Display(Name = "Назва шузів")]
+
         public string Name { get; set; }
 
         [Required]

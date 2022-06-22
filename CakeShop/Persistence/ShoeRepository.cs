@@ -44,17 +44,7 @@ namespace ShoeShop.Persistence
                 .Include(e => e.Category)
                 .ToListAsync();
         }
-        //Adding size
-        /*public async Task<IEnumerable<Shoe>> GetShoesBySize()
-        {
-            return await _context.Shoes
-                .Select(e => new ShoeDto
-                {
-                    Id = e.Id,
-                    Size = e.Size
-                })
-                .ToListAsync();
-        }*/
+
         public async Task<IEnumerable<ShoeNameIdDto>> GetAllShoesNameId()
         {
             return await _context.Shoes
