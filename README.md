@@ -31,12 +31,13 @@ A sample ShoesWebStore built with ASP.NET Core (Multi-Page Application)
 - **Using VS2022**
      ```
        > git clone https://github.com/AskoldNebelskyi/ShoesWebStore
-       > cd Cake-Shop/
+       > cd ShoesWebStore/
     ```
     - Now Open the `ShoesWebStore.sln` through `VS2022`.
-    - Open `appsettings.json` & change the connection string. (But wait! you may not need to change it as this the default connection string of `SQL Server Express` that comes with `Visual Studio`).
+    - Open `appsettings.json` & change the connection string. (It as this the default connection string of `SQL Server Express` that comes with `Visual Studio`).
     - Hit `Ctrl+Shift+B` to build.
-    - Open `Package Manager Console` from `Tools` and enter `update-database`.
+    - Open project directory in terminal and run `npm install`
+    - Open `Package Manager Console` from `Tools` and enter `Update-Database`.
     - Hit `Ctrl+F5` to run without debugging.
 
 - **Using CLI**
