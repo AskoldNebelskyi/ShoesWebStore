@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace ShoeShop
 {
@@ -32,11 +33,24 @@ namespace ShoeShop
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            services.AddDbContext<ShoeShopDbContext>(ctx =>
-            {
-                ctx.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
-            services.AddAutoMapper();
+            //services.AddDbContext<ShoeShopDbContext>(ctx =>
+            //{
+            //    ctx.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            //});
+
+
+            //////////////// ADDED AZURE SQL ////////////////
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+                services.AddDbContext<ShoeShopDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("AzureSQL")));
+            else
+                services.AddDbContext<ShoeShopDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.BuildServiceProvider().GetService<ShoeShopDbContext>().Database.Migrate();
+
+
+                services.AddAutoMapper();
 
             services.AddMemoryCache();
 
@@ -55,6 +69,8 @@ namespace ShoeShop
                 options.LoginPath = "/Account/Login";
                 options.AccessDeniedPath = "/Account/UnAuthorized";
             });
+
+
 
         }
 
