@@ -51,7 +51,8 @@
   
   <Target Name="BuildClientAssets" BeforeTargets="Publish">
     <Exec Command="npm install" />
-    <Exec Command="npm run build:prod" />
+    <!--<Exec Command="npm run build:prod" />-->
+    <Exec Command="npm run build --omit=dev" />
   </Target>
 
 </Project>

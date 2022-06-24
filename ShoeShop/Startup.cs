@@ -38,7 +38,6 @@ namespace ShoeShop
             //    ctx.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             //});
 
-
             //////////////// ADDED AZURE SQL ////////////////
             if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
                 services.AddDbContext<ShoeShopDbContext>(options =>
@@ -47,11 +46,9 @@ namespace ShoeShop
                 services.AddDbContext<ShoeShopDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.BuildServiceProvider().GetService<ShoeShopDbContext>().Database.Migrate();
+            //services.BuildServiceProvider().GetService<ShoeShopDbContext>().Database.Migrate();
 
-
-                services.AddAutoMapper();
-
+            services.AddAutoMapper();
             services.AddMemoryCache();
 
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
@@ -69,9 +66,6 @@ namespace ShoeShop
                 options.LoginPath = "/Account/Login";
                 options.AccessDeniedPath = "/Account/UnAuthorized";
             });
-
-
-
         }
 
 
@@ -91,7 +85,6 @@ namespace ShoeShop
 
             app.UseMvc(routes =>
             {
-
                 //routes.MapRoute(
                 //    name: "categoryFilter",
                 //    template: "Shoes/{action}/{category?}",
@@ -100,7 +93,6 @@ namespace ShoeShop
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-
             });
         }
     }
