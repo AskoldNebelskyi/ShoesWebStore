@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using ShoeShop.Core;
-using ShoeShop.Core.Models;
 using ShoeShop.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using ShoeShop.Core.Interfaces;
 
 namespace ShoeShop
 {

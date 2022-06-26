@@ -1,4 +1,4 @@
-﻿using ShoeShop.Core.Models;
+﻿using ShoeShop.Core.Interfaces;
 
 namespace ShoeShop.Core.ViewModel
 {

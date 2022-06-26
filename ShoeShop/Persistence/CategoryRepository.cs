@@ -1,7 +1,8 @@
-﻿using ShoeShop.Core.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using ShoeShop.Core.Interfaces;
+using ShoeShop.Core.Models;
 
 namespace ShoeShop.Persistence
 {

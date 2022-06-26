@@ -1,8 +1,9 @@
 ﻿using ShoeShop.Core.Dto;
+using ShoeShop.Core.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ShoeShop.Core.Models
+namespace ShoeShop.Core.Interfaces
 {
     public interface IShoeRepository
     {

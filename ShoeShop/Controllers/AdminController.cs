@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using ShoeShop.Core;
 using ShoeShop.Core.Dto;
-using ShoeShop.Core.Models;
 using ShoeShop.Core.ViewModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using ShoeShop.Core.Interfaces;
+using ShoeShop.Core.Models;
 
 namespace ShoeShop.Controllers
 {

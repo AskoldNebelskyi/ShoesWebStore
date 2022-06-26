@@ -2,6 +2,7 @@
 using ShoeShop.Core.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using ShoeShop.Core.Interfaces;
 
 namespace ShoeShop.Controllers
 {

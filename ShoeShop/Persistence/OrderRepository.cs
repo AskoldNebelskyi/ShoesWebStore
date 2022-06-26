@@ -1,11 +1,12 @@
 ﻿using ShoeShop.Core.Dto;
-using ShoeShop.Core.Models;
 using ShoeShop.Core.ViewModel;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ShoeShop.Core.Interfaces;
+using ShoeShop.Core.Models;
 
 namespace ShoeShop.Persistence
 {

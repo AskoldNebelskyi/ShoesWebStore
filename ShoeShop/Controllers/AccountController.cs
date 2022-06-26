@@ -56,7 +56,7 @@ namespace ShoeShop.Controllers
                 }
             }
 
-            ModelState.AddModelError("", "Invalid Username or Password");
+            ModelState.AddModelError("", "Невірне ім'я користувача або пароль");
             return View(loginViewModel);
         }
 
@@ -94,7 +94,7 @@ namespace ShoeShop.Controllers
                 });
 
             }
-
+            //////////Зробити вивід помилки окремо на кожну, а не форічом (для локалізації)
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error.Description);

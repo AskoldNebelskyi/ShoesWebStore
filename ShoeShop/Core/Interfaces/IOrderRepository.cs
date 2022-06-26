@@ -1,8 +1,9 @@
-﻿using ShoeShop.Core.ViewModel;
+﻿using ShoeShop.Core.Models;
+using ShoeShop.Core.ViewModel;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ShoeShop.Core.Models
+namespace ShoeShop.Core.Interfaces
 {
     public interface IOrderRepository
     {
