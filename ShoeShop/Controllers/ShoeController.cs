@@ -1,4 +1,4 @@
-﻿using ShoeShop.Core.Models;
+﻿//using ShoeShop.Core.Models;
 using ShoeShop.Core.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -19,13 +19,18 @@ namespace ShoeShop.Controllers
         }
 
         [HttpGet("{category?}")]
-        public async Task<IActionResult> List(string category)
+        public async Task<IActionResult> List(string category, string desc)
         {
             var selectedCategory = !string.IsNullOrWhiteSpace(category) ? category : null;
-            var shoesListViewModel = new ShoesListViewModel
+            //var 
+            ////////CATEGORY DESCRIPTION///////////
+            var selectedCatDesc = !string.IsNullOrWhiteSpace(desc) ? desc : null;
+            ShoesListViewModel shoesListViewModel = new ShoesListViewModel
             {
                 Shoes = await _shoeRepository.GetShoes(selectedCategory),
-                CurrentCategory = selectedCategory ?? "Усе усе наше взуття :)"
+                CurrentCategory = selectedCategory ?? "Усе усе наше взуття :)",
+                ////////CATEGORY DESCRIPTION///////////
+                Description = selectedCatDesc
             };
             return View(shoesListViewModel);
         }

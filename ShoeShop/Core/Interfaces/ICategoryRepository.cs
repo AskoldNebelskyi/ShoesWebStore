@@ -6,6 +6,7 @@ namespace ShoeShop.Core.Interfaces
 {
     public interface ICategoryRepository
     {
-        Task<IEnumerable<Category>> GetCategories();
+        Task<IEnumerable<Category>> GetCategories(string category = null /*, added second parameter string desc = null*/);
+        //Task<IEnumerable<Category>> GetCategoryDesc(string category = null);
     }
 }

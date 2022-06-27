@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ShoeShop.Core.Interfaces;
 using ShoeShop.Core.Models;
+using System.Linq;
 
 namespace ShoeShop.Persistence
 {
@@ -15,9 +16,22 @@ namespace ShoeShop.Persistence
             _context = context;
         }
 
-        public async Task<IEnumerable<Category>> GetCategories()
+
+        ////////CATEGORY DESCRIPTION///////////
+        public async Task<IEnumerable<Category>> GetCategories(string category = null/*, string desc = null*/)
         {
-            return await _context.Categories.ToListAsync();
+            var query = _context.Categories
+                .Include(c => c.Description)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(category))
+            {
+                //query = query.Include(c => c.Description);
+                query = query.Where(c => c.Name == category);
+            }
+
+            return await query.ToListAsync();
         }
+
     }
 }

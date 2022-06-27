@@ -38,6 +38,23 @@ namespace ShoeShop.Persistence
             return await query.ToListAsync();
         }
 
+        ////////CATEGORY DESCRIPTION///////////
+        /*public async Task<IEnumerable<Category>> GetCategories(string category = null)
+        {
+            var query = _context.Categories
+                .Include(c => c.Description)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(category))
+            {
+                query = query.Where(c => c.Description == category);
+            }
+
+            return await query.ToListAsync();
+        }*/
+        //////////////////////////////////////////////////////////////////
+      
+
         public async Task<IEnumerable<Shoe>> GetShoesOfTheWeek()
         {
             return await _context.Shoes

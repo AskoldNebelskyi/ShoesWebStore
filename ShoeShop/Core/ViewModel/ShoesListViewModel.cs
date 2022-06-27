@@ -7,5 +7,7 @@ namespace ShoeShop.Core.ViewModel
     {
         public IEnumerable<Shoe> Shoes { get; set; }
         public string CurrentCategory { get; set; }
+        ////////CATEGORY DESCRIPTION///////////
+        public string Description { get; set; }
     }
 }
